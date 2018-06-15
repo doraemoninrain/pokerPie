@@ -3,27 +3,12 @@ package pokerPie;
 public class poker02 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub ♠ ♠ ♠
-//		System.out.println("♠");
-//		System.out.println("♥");
-//		System.out.println("♦");
-//		System.out.println("♣");
-		
-		//test:
-//		String a = "♥1";
-//		System.out.println(a);
-
-		
 		//q: 1) S1,H1,D1,
 			  //S2,C2,S3,H4,H5,
 			  //D6,D7,H8,D8,C8
 		String[] poker13 = {"♠1","♥1","♦1",      //♠ 有 3 張
 					"♠2","♣3","♠3","♥4","♥5",	 //♥ 有 4 張
 					"♦6","♦7","♥8","♦8","♣8"}; 	 //♦ 有 4 張
-		for(String one : poker13) { 			 //♣ 有 2 張        //共 13 張 
-			System.out.println(one);
-		}
-		System.out.println("有 " + poker13.length + " 張牌");
 		
 		//找出以下這些機率:
 		
@@ -32,31 +17,43 @@ public class poker02 {
 		// ♥ ♥ ♥ ♥ ♥
 		// ♦ ♦ ♦ ♦ ♦ 
 		// ♣ ♣ ♣ ♣ ♣
-		//取出字串某個位置 charAt(int index)
-		//test
-		String string = "♦6";
-		System.out.println(string.charAt(0));  //♦
 		
 		int count1 = 0;
 		int count2 = 0;
 		int count3 = 0;
 		int count4 = 0;
 		
-		//判斷 此陣列 每個花色有幾張:
+		//判斷 此陣列 每個花色有幾張 & 哪些元素:
 		for(int i=0; i<poker13.length; i++) {
 			if(poker13[i].charAt(0) == '♠') {
-				//我要程式 幫我印出 所有♠的元素 與 元素個數有幾個:
-				//String a = (poker13[i].charAt(0) == '♠');
-				
-				//System.out.println(a);
+				count1++;
+				System.out.println("♠ : " + poker13[i]);
 			}
+			
+//			if(poker13[i].charAt(0) == '♥') {
+//				count2++;
+//				System.out.println("♥ : " + poker13[i]);
+//			}
+			
+		}
+		
+		System.out.println("==========");
+		
+		for(int i=0; i<poker13.length; i++) {			
 			if(poker13[i].charAt(0) == '♥') {
 				count2++;
-				System.out.println("s" + poker13[i]);
+				System.out.println("♥ : " + poker13[i]);
 			}
 			
 		}
-		System.out.println("有幾張 ♥ 呢?: " + count2);
+
+		System.out.println("==========");
+		
+		System.out.println("♠ 幾張: " + count1);
+		System.out.println("♥ 幾張: " + count2);
+		System.out.println("♦ 幾張: " + count3);
+		System.out.println("♣ 幾張: " + count4);
+
 		
 		
 		
